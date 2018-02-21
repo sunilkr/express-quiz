@@ -1,0 +1,13 @@
+{
+  "name": "express_quiz_app",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "*",
+    "ejs": "*",
+    "pug": "*",
+    "underscore": "*"
+  },
+  "scripts": {
+      "start": "node app.js"
+  }
+}
