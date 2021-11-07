@@ -1,0 +1,107 @@
+{
+    "$schema": "../quiz.schema.json",
+    "questions": [
+        {
+            "language": "javascript",
+            "title": "You access Cookie using javascript?",
+            "options": [
+                {
+                    "value": "True",
+                    "render": "bool"
+                },
+                {
+                    "value": "False",
+                    "render": "bool"
+                }                
+            ],
+            "answer": ["True"],
+            "difficulty": 3,
+            "tags": ["http", "web", "js"]
+        },
+        {
+            "language": "javascript",
+            "title": "Which of the following is the correct syntax to print a page using JavaScript?",
+            "options": [
+                {
+                    "value": "window.print();",
+                    "render": "code"
+                },
+                {
+                    "value": "browser.print();",
+                    "render": "code"
+                },
+                {
+                    "value": "navigatore.print();",
+                    "render": "code"
+                },
+                {
+                    "value": "document.print();",
+                    "render": "code"
+                }
+            ],
+            "answer": ["window.print();"],
+            "difficulty": 4,
+            "tags": ["js", "html", "print"]
+        },
+        {
+            "language": "javascript",
+            "title": "If you type the following code in the console window, what result will you get?",
+            "code": "3 > 2 > 1 === false;",
+            "options": [
+                {
+                    "value": "True",
+                    "render": "bool"
+                },
+                {
+                    "value": "False",
+                    "render": "bool"
+                },
+                {
+                    "value": "Error"
+                },
+                {
+                    "value": "Undefined"
+                }
+            ],
+            "answer": ["True"],
+            "difficulty": 5,
+            "tags": ["syntax", "knolwdge", "js"]
+        },
+        {
+            "language": "javascript",
+            "title": "To insert a JavaScript into an HTML page, which tag is used?",
+            "options": [
+                {
+                    "value": "<script=\"java\">"                    
+                },
+                {
+                    "value": "<javascript>"                    
+                },
+                {
+                    "value": "<script>"                    
+                },
+                {
+                    "value": "<js>"                    
+                }
+            ],
+            "answer": ["<script>"],
+            "difficulty": 1,
+            "tags": ["html", "syntax"],
+            "hints": ["Attributes of HTML tags define language."]
+        },
+        {
+            "language": "javascript",
+            "title": "Which of the following are valid comparison operators?",
+            "mcq": true,
+            "options": [
+                {"value": "==", "showAs": "code"},
+                {"value": "===", "showAs": "code"},
+                {"value": "=", "showAs": "code"},
+                {"value": "|", "showAs": "code"}
+            ],
+            "answer": ["==", "==="],
+            "difficulty": 3,
+            "tags": ["js", "syntax", "special-case"]
+        }
+    ]
+}

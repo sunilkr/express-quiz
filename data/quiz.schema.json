@@ -1,0 +1,101 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "Quiz questions",
+    "description": "Questions to be asked by user during the quiz.",
+    "type": "object",
+    "properties": {
+        "questions": {
+            "description": "List of questions",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "description": "Question",                
+                "properties": {
+                    "mcq": {
+                        "description": "Is it multiple choice question?",
+                        "type": "boolean",
+                        "default": false
+                    },
+                    "language": {
+                        "description": "Programming language for this question.",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "What is being asked?",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": "Additional description. Can use HTML.",
+                        "type": "string"
+                    },
+                    "code": {
+                        "description": "Code snippet associated with this question.",
+                        "type": "string"
+                    },
+                    "tags": {
+                        "description": "Applicable tags",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "examples": [
+                            "logical",
+                            "knolwdge",
+                            "syntax",
+                            "corner-case"
+                        ]
+                    },
+                    "options": {
+                        "description": "Answer options for objective type question.",
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "value": {
+                                    "description": "Value of this option",
+                                    "type": "string"
+                                },
+                                "showAs": {
+                                    "description": "How to render this option. e.g. code, html, math etc.",
+                                    "type": "string",
+                                    "default": "string"
+                                }
+                            },
+                            "required": ["value"]
+                        },
+                        "minItems": 2,
+                        "maxItems": 4,
+                        "uniqueItems": true
+                    },
+                    "answer": {
+                        "description": "Corrent answer. Can be one of the options for objective questions.",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "difficulty": {
+                        "description": "Diffculty rating",
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 10
+                    },
+                    "hints": {
+                        "description": "Hints to help solve this question",
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "maxItems": 5
+                    }
+                },
+                "required": [
+                    "title",
+                    "tags",
+                    "answer",
+                    "difficulty"
+                ]
+            }
+        }
+    }
+}
